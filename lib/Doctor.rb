@@ -2,12 +2,11 @@ require 'pry'
 
 class Doctor
 
-  attr_reader :name, :specialty, :id
+  attr_reader :name, :id
 
 
   def initialize(attributes)
     @name = attributes['name']
-    @specialty = attributes['specialty']
     @id = attributes['id']
   end
 
@@ -37,19 +36,4 @@ class Doctor
     end
     patients
   end
-
-  def show_specialties
-    #stuff to show specialties, not required
-  end
-
-
-  # def self.specialty
-  #   results = DB.exec("SELECT * FROM specialty WHERE doctor_id = #{@id};")
-  #   specialty = []
-  #   results.each do |result|
-  #     patients << Patient.new(result)
-  #   end
-  #   patients
-  # end
-
 end
